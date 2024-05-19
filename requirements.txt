@@ -1,0 +1,7 @@
+altair==5.1.1
+pandas==2.1.0
+pyprojroot==0.3.0
+numpy==1.25.2
+duckdb==0.8.1
+selenium==4.19.0
+beautifulsoup4==4.12.3
