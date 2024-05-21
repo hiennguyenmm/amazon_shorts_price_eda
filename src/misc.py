@@ -2,6 +2,7 @@ import bs4
 from bs4 import BeautifulSoup
 from selenium.webdriver.common.by import By
 from src.variables import page_class, output_class
+from pathlib import Path
 
 
 def func_extract_soup(class_string, soup):
@@ -44,3 +45,25 @@ def extract_html(chrome_options) -> bs4.element.ResultSet:
         0
     ].findAll("div", attrs={"class": output_class})
     return response
+
+
+def format_sql(sql_query_file: Path, params: dict = None) -> str:
+    """Format sql with input param
+
+    Parameters
+    ----------
+    sql_query_file : Path
+        path to sql file
+    params : dict
+
+    Returns
+    -------
+    str
+        query after format
+    """
+    with open(sql_query_file, "r") as f:
+        sql = f.read()
+    if params is not None:
+        sql = sql.format(**params)
+
+    return sql
