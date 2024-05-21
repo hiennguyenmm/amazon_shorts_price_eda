@@ -1,4 +1,17 @@
-Repository Structure
+This project purpose is to give an overview about the price range and sellers' selling performance on Amazon on item booty shorts
+
+**Goal**
+1. Extract data from Amazon  
+- [x] Connect to Amazon.com
+- [x] Automatically search for 'booty shorts'
+- [x] Collect html response of the current site
+- [ ] Collect multiple html response by browsing next pages
+2. Analyze data
+- [x] Parse html response to usable data frame
+- [ ] EDA
+      
+
+**Repository Structure**
 ```
 ├── README.md          
 │
