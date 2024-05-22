@@ -1,4 +1,5 @@
-This project purpose is to give an overview about the price range and sellers' selling performance on Amazon on item booty shorts
+This project purpose is to support my business idea bout selling booty shorts on Amazon  
+We will try to have an overview of market price and buying demand on the website
 
 **Goal**
 1. Extract data from Amazon  
