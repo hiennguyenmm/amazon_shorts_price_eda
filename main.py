@@ -1,9 +1,5 @@
 from src.extract import extraction
 from src.variables import text_box_id
-from src.misc import format_sql
-from pyprojroot import here
-import duckdb
-import altair as alt
 
 text_box_input = "booty shorts"
 website = "https://www.amazon.com/"
