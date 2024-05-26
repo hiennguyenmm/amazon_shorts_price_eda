@@ -1,5 +1,7 @@
 from src.extract import extraction
 from src.variables import text_box_id
+from src.misc import format_sql
+from pyprojroot import here
 import duckdb
 import altair as alt
 
@@ -14,20 +16,3 @@ data_crawling.parse_dataframe()
 data_crawling.close_browser()
 
 df = data_crawling.output_df
-
-
-df = duckdb.query(
-    """
-select item_name,
-             cast(replace(price,'$','') as float) as price,
-             cast(replace(no_of_ratings,',','') as integer) as no_of_ratings,
-             bought_last_month
-              from df 
-where item_name is not null
-             """
-).to_df()
-df.count()
-
-alt.Chart(df).mark_bar().encode(x="price", y="count()")
-alt.Chart(df).mark_point().encode(x="price", y="no_of_ratings")
-alt.Chart(df).mark_boxplot().encode(x="price", y="no_of_ratings")
