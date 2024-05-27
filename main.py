@@ -12,3 +12,5 @@ data_crawling.parse_dataframe()
 data_crawling.close_browser()
 
 df = data_crawling.output_df
+
+df.to_csv("data.csv")  # FIXME # save to local machine for now
