@@ -1,5 +1,4 @@
-This project purpose is to support my business idea bout selling booty shorts on Amazon  
-We will try to have an overview of market price and buying demand on the website
+The purpose of this project is to support my business idea of selling booty shorts on Amazon. We aim to analyze the market prices and buying demand on the platform to gain a comprehensive understanding of the market landscape.  
 
 **Goal**
 1. Extract data from Amazon  
@@ -22,6 +21,8 @@ We will try to have an overview of market price and buying demand on the website
 │   ├── __init__.py    
 │   │
 │   ├── extract.py     <- crawl website and retrieve html response
+│   │
+│   ├── analysis.py    <- exploratory analysis and visualizations
 │   │
 │   ├── misc.py        <- helper functions
 │   │
